@@ -1,0 +1,69 @@
+.hero {
+  background-color: var(--tertiary);
+  position: relative;
+}
+
+.header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 15rem;
+  padding: 0 4rem;
+}
+
+.links {
+  display: flex;
+  gap: 6rem;
+  justify-content: flex-start;
+}
+
+.cart {
+  height: 4rem;
+  margin-left: auto;
+  position: relative;
+  width: 4rem;
+}
+
+.cart * {
+  width: 100% !important;
+}
+
+.cart > a {
+  display: block;
+}
+
+.cart svg {
+  color: aqua;
+}
+
+.banner {
+  align-items: flex-start;
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+.presentation {
+  max-width: 50%;
+}
+
+.introduction {
+  margin: 2.4rem 0;
+}
+
+.image {
+  min-height: clamp(50rem, 40vw, 70rem);
+  position: relative;
+  width: clamp(40rem, 35vw, 60rem);
+}
+
+.image * {
+  width: 100% !important;
+}
+
+.curves {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
