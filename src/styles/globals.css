@@ -2,6 +2,7 @@
   --primary: #642c99;
   --secondary: #fbfac9;
   --tertiary: #f7cfda;
+  --green: #EFFBE2;
 }
 
 * {
@@ -28,10 +29,13 @@ a {
   text-decoration: none;
 }
 
-
-h1 {
+h1,
+.title {
   color: var(--primary);
   font-family: 'Wendy One', sans-serif;
+}
+
+h1 {
   font-size: 12rem;
 }
 

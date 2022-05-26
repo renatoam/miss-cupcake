@@ -1,10 +1,11 @@
 .hero {
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   position: relative;
 }
 
 .header {
   align-items: center;
+  background-color: var(--tertiary);
   display: grid;
   grid-template-columns: 2fr 1fr;
   min-height: 15rem;
@@ -37,14 +38,19 @@
 }
 
 .banner {
-  align-items: flex-start;
-  display: flex;
+  align-items: center;
+  background-color: var(--tertiary);
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
   margin: auto;
-  width: 70%;
+  width: 100%;
 }
 
 .presentation {
   max-width: 50%;
+  margin-left: auto;
 }
 
 .introduction {
@@ -62,8 +68,114 @@
 }
 
 .curves {
-  position: absolute;
-  top: 100%;
   width: 100%;
 }
 
+.about {
+  background-color: var(--green);
+  position: relative;
+}
+
+.content {
+  align-items: center;
+  background-color: var(--secondary);
+  display: grid;
+  gap: 20rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+}
+
+.informationAbout {
+  max-width: 80%;
+}
+
+.title {
+  font-size: 9.6rem;
+}
+
+.imageAbout {
+  display: grid;
+  grid-gap: 1.6rem;
+  margin-left: auto;
+  position: relative;
+  width: 40rem;
+}
+
+.imageAbout * {
+  width: 100% !important;
+}
+
+.description {
+  margin: 2.4rem 0;
+}
+
+.catalog {
+  background-color: var(--green);
+  display: grid;
+  justify-content: center;
+}
+
+.catalogContent {
+  margin: auto;
+  width: 70%;
+}
+
+.titleCatalog {
+  font-size: 8.8rem;
+  max-width: 50%;
+}
+
+.products {
+  display: grid;
+  gap: 8rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 8rem auto;
+}
+
+.product {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.clickable {
+  display: block;
+  min-height: 33.5rem;
+}
+
+.actions {
+  align-items: stretch;
+  display: flex;
+  gap: 2rem;
+  height: 4rem;
+}
+
+.quantity {
+  background-color: transparent;
+  border: .2rem solid var(--primary);
+  border-radius: .8rem;
+  display: flex;
+  max-width: 10rem;
+}
+
+.quantity input {
+  background-color: transparent;
+  border: none;
+  color: var(--primary);
+  display: block;
+  font-size: 2.4rem;
+  width: 30%;
+}
+
+.quantity input[type="text"] {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 40%;
+}
+
+.quantity input[type="text"]:focus {
+  border: none;
+  outline: none;
+}

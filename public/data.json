@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Carrot",
+      "description": "Walnut-studded carrot cake with cinnamon cream cheese frosting",
+      "price": 8.99,
+      "quantity": 24,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5eeb3b6c0e3572aadf26c65b/img/1homepage-minipartycateringcarrotcupcakelarge@2x.png"
+    },
+    {
+      "id": 2,
+      "name": "Red Velvet",
+      "description": "A chocolate sponge, coloured naturally with beetroot and topped off with cream cheese.",
+      "price": 8.99,
+      "quantity": 16,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-97@2x.png"
+    },
+    {
+      "id": 3,
+      "name": "Mint Chip",
+      "description": "Homemade chocolate cupcakes topped with thick & creamy mint chocolate chip frosting.",
+      "price": 8.99,
+      "quantity": 32,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/cupcake-3@2x.png"
+    },
+    {
+      "id": 4,
+      "name": "Pink Strawberry",
+      "description": "A fluffy strawberry cupcake with strawberry buttercream frosting and chocolate syrup.",
+      "price": 9.99,
+      "quantity": 8,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-3@2x.png"
+    },
+    {
+      "id": 5,
+      "name": "Marshmallow",
+      "description": "A super chocolatey cupcake base with a soft marshmallowy buttercream topping.",
+      "price": 9.99,
+      "quantity": 16,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-4@2x.png"
+    },
+    {
+      "id": 6,
+      "name": "Dark Chocolate",
+      "description": "Belgian chocolate cake with sweet chocolate frosting and cheery.",
+      "price": 9.99,
+      "quantity": 0,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-5@2x.png"
+    },
+    {
+      "id": 7,
+      "name": "Salty Caramel",
+      "description": "Caramel cake with a buttery caramel cream cheese frosting topped with fleur de sel.",
+      "price": 11.99,
+      "quantity": 32,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-6@2x.png"
+    },
+    {
+      "id": 8,
+      "name": "Gluten Free Velvet",
+      "description": "A gluten free twist on our classic red velvet, topped off with cream cheese.",
+      "price": 11.99,
+      "quantity": 0,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-7@2x.png"
+    },
+    {
+      "id": 9,
+      "name": "Cinnamon",
+      "description": "Lightly spiced buttermilk cake with cinnamon cream cheese frosting with cinnamon sugar.",
+      "price": 11.99,
+      "quantity": 4,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-8@2x.png"
+    },
+    {
+      "id": 10,
+      "name": "Totally Nuts",
+      "description": "A sweet hazelnut paste with nutella butter cream and chopped hazelnuts on the top.",
+      "price": 13.99,
+      "quantity": 0,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-9@2x.png"
+    },
+    {
+      "id": 11,
+      "name": "Pink Vanilla",
+      "description": "Soft, fluffy, and extra moist creamy vanilla buttercream with extra sprinkles",
+      "price": 13.99,
+      "quantity": 24,
+      "image": "https://anima-uploads.s3.amazonaws.com/projects/5ed76048843b68644d632a1d/releases/5f04db2554f88da56c7c8ec4/img/image-10@2x.png"
+    }
+  ]
+}
