@@ -58,3 +58,15 @@ button:hover {
   background-color: transparent;
   color: var(--primary);
 }
+
+button:disabled {
+  background-color: #c094ea;
+  border: none;
+  color: var(--primary);
+}
+
+button:disabled:hover {
+  background-color: #c094ea;
+  color: var(--primary);
+  cursor: default;
+}

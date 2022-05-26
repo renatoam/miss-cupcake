@@ -2,6 +2,7 @@ import axios from 'axios'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import Card from '../components/Card'
 import styles from '../styles/home.module.css'
 import { ProductDTO, ProductsResponse } from '../types'
 
@@ -69,27 +70,7 @@ const Home: NextPage = () => {
         <section className={styles.catalogContent}>
           <h2 className={`title ${styles.titleCatalog}`}>Make your day a little sweeter</h2>
           <section className={styles.products}>
-            {products?.map(product => {
-              return (
-                <section key={product.id} className={styles.product}>
-                  <a href="#" className={styles.clickable}>
-                    <figure>
-                      <Image src={product.image} alt={product.name} width={200} height={200} />
-                    </figure>
-                    <h2>{product.name}</h2>
-                    <p>{product.description}</p>
-                  </a>
-                  <section className={styles.actions}>
-                    <section className={styles.quantity}>
-                      <input type="button" value="-" />
-                      <input type="text" value={product.quantity} />
-                      <input type="button" value="+" />
-                    </section>
-                    <button>Add to Cart</button>
-                  </section>
-                </section>
-              )
-            })}
+            {products?.map(product => <Card key={product.id} product={product} />)}
           </section>
         </section>
       </article>
