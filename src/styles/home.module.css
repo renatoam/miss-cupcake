@@ -71,7 +71,7 @@
   width: 100%;
 }
 
-.about {
+.why {
   background-color: var(--green);
   position: relative;
 }
@@ -85,7 +85,7 @@
   padding: 4rem;
 }
 
-.informationAbout {
+.informationWhy {
   max-width: 80%;
 }
 
@@ -93,7 +93,7 @@
   font-size: 9.6rem;
 }
 
-.imageAbout {
+.imageWhy {
   display: grid;
   grid-gap: 1.6rem;
   margin-left: auto;
@@ -101,7 +101,7 @@
   width: 40rem;
 }
 
-.imageAbout * {
+.imageWhy * {
   width: 100% !important;
 }
 
@@ -110,12 +110,17 @@
 }
 
 .catalog {
-  background-color: var(--green);
+  background-color: var(--beige);
   display: grid;
   justify-content: center;
 }
 
 .catalogContent {
+  background-color: var(--green);
+  width: 100%;
+}
+
+.products {
   margin: auto;
   width: 70%;
 }
@@ -125,9 +130,46 @@
   max-width: 50%;
 }
 
-.products {
+.list {
   display: grid;
   gap: 8rem;
   grid-template-columns: repeat(3, 1fr);
   margin: 8rem auto;
+}
+
+.about {
+  background-color: var(--primary);
+  position: relative;
+}
+
+.aboutContent {
+  align-items: center;
+  background-color: var(--beige);
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 55% 40%;
+  padding: 4rem;
+  width: 100%;
+}
+
+.informationAbout {
+  margin-left: auto;
+  max-width: 80%;
+}
+
+.imageAbout {
+  display: grid;
+  margin-right: auto;
+  position: relative;
+  width: 50rem;
+}
+
+.imageAbout > span {
+  height: 70rem !important;
+  width: auto !important;
+}
+
+.imageAbout * {
+  overflow: visible !important;
+  bottom: 50% !important;
 }
