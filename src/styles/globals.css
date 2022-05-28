@@ -71,3 +71,28 @@ button:disabled:hover {
   color: var(--primary);
   cursor: default;
 }
+
+button.alternative {
+  background-color: var(--beige);
+  border: 0.4rem solid var(--beige);
+  color: var(--primary);
+}
+
+button.alternative:hover {
+  background-color: var(--tertiary);
+  border: 0.4rem solid var(--tertiary);
+  color: var(--primary);
+}
+
+button:disabled {
+  background-color: var(--secondary);
+  border: none;
+  color: #c094ea;
+}
+
+button:disabled:hover {
+  background-color: var(--secondary);
+  border: none;
+  color: #c094ea;
+  cursor: default;
+}

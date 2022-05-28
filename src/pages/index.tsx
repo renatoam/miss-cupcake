@@ -94,6 +94,33 @@ const Home: NextPage = () => {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fdefd2" fillOpacity="1" d="M0,192L48,170.7C96,149,192,107,288,122.7C384,139,480,213,576,218.7C672,224,768,160,864,133.3C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
         </figure>
       </article>
+      <footer className={styles.footer}>
+        <section className={styles.footerContent}>
+          <section>
+            <h2 className={`title ${styles.footerTitle}`}>Miss Cupcake</h2>
+          </section>
+          <section>
+            <ul className={styles.footerLinks}>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Our story</a></li>
+              <li><a href="#">Why Miss Cupcake</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2 className={styles.newsTitle}>Suger up your Inbox</h2>
+            <div className={styles.formControl}>
+              <input type="text" placeholder='Email address' />
+              <button className='alternative'>Send</button>
+            </div>
+          </section>
+        </section>
+        <section className={styles.footerBottom}>
+          <p>© Miss Cupcakes 2022 | Frontending Developers</p>
+          <p>Privacy Police</p>
+          <p>Cookies Policy</p>
+          <p>Terms of use</p>
+        </section>
+      </footer>
     </>
   )
 }

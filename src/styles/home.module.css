@@ -173,3 +173,69 @@
   overflow: visible !important;
   bottom: 50% !important;
 }
+
+.footer {
+  background-color: var(--primary);
+  color: var(--beige);
+}
+
+.footer p,
+.footer a {
+  color: var(--beige);  
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  margin: auto;
+  width: 70%;
+}
+
+.footerBottom {
+  align-items: center;
+  display: flex;
+  gap: 4.8rem;
+  min-height: 20rem;
+  justify-content: center;
+}
+
+.footerTitle {
+  color: var(--beige);
+  font-size: 3.2rem;
+  max-width: 20rem;
+}
+
+.footerLinks a {
+  display: block;
+  padding-bottom: 2rem;
+  max-width: 20rem;
+}
+
+.newsTitle {
+  color: var(--beige);
+  font-size: 3.2rem;
+}
+
+.formControl {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.formControl input {
+  background-color: transparent;
+  border: .2rem solid var(--beige);
+  border-radius: .8rem;
+  color: var(--beige);
+  display: grid;
+  font-size: 1.6rem;
+  max-height: 4rem;
+  padding: 2rem;
+  place-content: center;
+  width: clamp(20rem, 100%, 40rem);
+}
+
+.formControl input::placeholder {
+  color: var(--tertiary);
+  opacity: 0.6;
+}
