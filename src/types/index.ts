@@ -1,4 +1,4 @@
-export interface ProductDTO {
+export interface ProductProps {
   id: string | number
   name: string
   description: string
@@ -8,5 +8,5 @@ export interface ProductDTO {
 }
 
 export type ProductsResponse = {
-  products: ProductDTO[]
+  products: ProductProps[]
 }

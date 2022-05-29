@@ -3,7 +3,7 @@ import { readFileSync } from 'fs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import getConfig from 'next/config'
 import path from 'path'
-import { ProductDTO, ProductsResponse } from '../../types'
+import { ProductProps, ProductsResponse } from '../../types'
 
 export default function handler(_request: NextApiRequest, response: NextApiResponse<AxiosResponse<ProductsResponse>>) {
   const { serverRuntimeConfig } = getConfig()

@@ -1,80 +1,52 @@
 import Image from "next/image"
-import { ChangeEvent, useState } from "react"
-import { ProductDTO } from "../../types"
+import { ProductProps } from "../../types"
+import { INITIAL_QUANTITY, MAXIMUM_LIMIT_REACHED, OUT_OF_STOCK } from "./constants"
+import { useCard } from "./hooks/useCard"
 import styles from './styles.module.css'
 
 interface CardProps {
-  product: ProductDTO
+  handledProduct: ProductProps
 }
 
-const INITIAL_QUANTITY = 1
-const NOSTOCK_QUANTITY = 0
-const MAXIMUM_LIMIT_REACHED = 'Maximum quantity reached'
-const OUT_OF_STOCK = 'Out of stock'
-const MESSAGE_TIMEOUT = 5000
-
-export default function Card({ product }: CardProps) {
-  const [quantity, setQuantity] = useState(INITIAL_QUANTITY)
-  const [isMessageVisible, setIsMessageVisible] = useState(false)
-  
-  function handleIncreaseQuantity(productQuantity: number) {
-    if (quantity >= productQuantity) {
-      return toggleProductMessage()
-    }
-
-    setQuantity(currentQuantity => currentQuantity + 1)
-  }
-  
-  function handleDecreaseQuantity() {
-    if (quantity === INITIAL_QUANTITY) return removeFromCart()
-    if (quantity <= NOSTOCK_QUANTITY) return
-
-    setQuantity(currentQuantity => currentQuantity - 1)
-  }
-
-  function handleChangeQuantity(event: ChangeEvent<HTMLInputElement>, productQuantity: number) {
-    const incomingValue = Number(event.target.value)
-    const newValue = incomingValue > productQuantity ? productQuantity : incomingValue
-
-    setQuantity(newValue)
-  }
-
-  function removeFromCart() {
-    // dispatch actions to remove from cart
-    console.log('Remove from Cart')
-  }
-
-  function toggleProductMessage() {
-    clearTimeout()
-    setIsMessageVisible(true)
-
-    setTimeout(() => {
-      setIsMessageVisible(false)
-    }, MESSAGE_TIMEOUT)
-  }
+export default function Card({ handledProduct }: CardProps) {
+  const {
+    isMessageVisible,
+    currentQuantity,
+    buttonLabel,
+    isDisabled,
+    handleDecreaseQuantity,
+    handleChangeQuantity,
+    handleIncreaseQuantity,
+    handleProductOnCart
+  } = useCard(handledProduct)
 
   return (
-    <section key={product.id} className={styles.product}>
+    <section className={styles.product}>
       <a href="#" className={styles.clickable}>
         <figure>
-          <Image src={product.image} alt={product.name} width={200} height={200} />
+          <Image src={handledProduct.image} alt={handledProduct.name} width={200} height={200} />
         </figure>
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
+        <h2>{handledProduct.name}</h2>
+        <p>{handledProduct.description}</p>
         {isMessageVisible && <span className={styles.message}>{MAXIMUM_LIMIT_REACHED}</span>}
-        {product.quantity === NOSTOCK_QUANTITY && <span className={styles.message}>{OUT_OF_STOCK}</span>}
+        {handledProduct.quantity === INITIAL_QUANTITY && <span className={styles.message}>{OUT_OF_STOCK}</span>}
       </a>
       <section className={styles.actions}>
         <section className={styles.quantity}>
           <input type="button" value="-" onClick={handleDecreaseQuantity} />
           <input
             type="text"
-            onChange={event => handleChangeQuantity(event, product.quantity)}
-            value={product.quantity > NOSTOCK_QUANTITY ? quantity : NOSTOCK_QUANTITY}
+            onChange={handleChangeQuantity}
+            value={currentQuantity}
           />
-          <input type="button" value="+" onClick={() => handleIncreaseQuantity(product.quantity)} />
+          <input type="button" value="+" onClick={() => handleIncreaseQuantity(handledProduct)} />
         </section>
-        <button disabled={product.quantity === 0}>Add to Cart</button>
+        <button
+          disabled={isDisabled}
+          onClick={handleProductOnCart}
+        >
+          {buttonLabel}
+        </button>
       </section>
     </section>
   )

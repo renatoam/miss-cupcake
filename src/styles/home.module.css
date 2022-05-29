@@ -31,10 +31,53 @@
 
 .cart > a {
   display: block;
+  position: relative;
 }
 
 .cart svg {
   color: aqua;
+}
+
+.badge {
+  background-color: var(--primary);
+  border-radius: 100%;
+  color: var(--secondary);
+  display: grid;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  left: 60%;
+  place-content: center;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 2.5rem !important;
+}
+
+.cartHidden {
+  background-color: var(--tertiary);
+  border: .4rem solid var(--primary);
+  border-radius: 100%;
+  bottom: 8%;
+  cursor: pointer;
+  display: grid;
+  height: 8rem;
+  /* opacity: 0; */
+  place-content: center;
+  position: fixed;
+  right: 5%;
+  transition: all .4s ease-in-out;
+  width: 8rem;
+  z-index: 1;
+}
+
+.cartHidden svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.cartHidden .badge {
+  left: 55%;
+  top: 20%;
 }
 
 .banner {
